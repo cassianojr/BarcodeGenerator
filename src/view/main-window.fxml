@@ -1,15 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.control.Tab?>
-<?import javafx.scene.control.TabPane?>
-<?import javafx.scene.control.TextArea?>
-<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.*?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.text.Font?>
-
-<TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="395.0" prefWidth="456.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/8.0.231" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MainController">
+<?import javafx.scene.text.*?>
+<TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="395.0" prefWidth="456.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MainController">
   <tabs>
     <Tab text="Código Único">
       <content>
@@ -25,21 +19,27 @@
                         <Font size="18.0" />
                      </font>
                   </Label>
-                  <TextField fx:id="txtSingleFileChooser" disable="true" layoutX="39.0" layoutY="129.0" prefHeight="39.0" prefWidth="274.0" promptText="Selecione o local do arquivo">
+                  <TextField fx:id="txtSingleFileChooser" disable="true" layoutX="42.0" layoutY="199.0" prefHeight="39.0" prefWidth="274.0" promptText="Selecione o local do arquivo">
                      <font>
                         <Font size="18.0" />
                      </font>
                   </TextField>
-                  <Button fx:id="btnSingleFileChooser" layoutX="314.0" layoutY="129.0" mnemonicParsing="false" onAction="#handleFileChooser" prefHeight="39.0" prefWidth="111.0" text="Selecionar">
+                  <Button fx:id="btnSingleFileChooser" layoutX="316.0" layoutY="199.0" mnemonicParsing="false" onAction="#handleFileChooser" prefHeight="39.0" prefWidth="111.0" text="Selecionar">
                      <font>
                         <Font size="18.0" />
                      </font>
                   </Button>
-                  <Button fx:id="btnGenerateSingle" layoutX="124.0" layoutY="221.0" mnemonicParsing="false" onAction="#handleGenerateSingle" text="Gerar Código de Barras">
+                  <Button fx:id="btnGenerateSingle" layoutX="124.0" layoutY="265.0" mnemonicParsing="false" onAction="#handleGenerateSingle" text="Gerar Código de Barras">
                      <font>
                         <Font size="18.0" />
                      </font>
                   </Button>
+                  <ComboBox fx:id="cbSingleBarcodeType" layoutX="36.0" layoutY="152.0" prefHeight="25.0" prefWidth="388.0" promptText="Selecione o tipo de Código de Barras" />
+                  <Label layoutX="33.0" layoutY="125.0" text="Tipo do código de Barras:">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
                </children></AnchorPane>
       </content>
     </Tab>
@@ -47,17 +47,17 @@
       <content>
         <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                <children>
-                  <TextField fx:id="txtMultiFileChooser" disable="true" layoutX="31.0" layoutY="266.0" prefHeight="39.0" prefWidth="280.0" promptText="Selecione o local do arquivo">
+                  <TextField fx:id="txtMultiFileChooser" disable="true" layoutX="33.0" layoutY="274.0" prefHeight="39.0" prefWidth="280.0" promptText="Selecione o local do arquivo">
                      <font>
                         <Font size="18.0" />
                      </font>
                   </TextField>
-                  <Button fx:id="btnMultiFileChooser" layoutX="311.0" layoutY="266.0" mnemonicParsing="false" onAction="#handleFileChooser" prefHeight="39.0" prefWidth="111.0" text="Selecionar">
+                  <Button fx:id="btnMultiFileChooser" layoutX="313.0" layoutY="274.0" mnemonicParsing="false" onAction="#handleFileChooser" prefHeight="39.0" prefWidth="111.0" text="Selecionar">
                      <font>
                         <Font size="18.0" />
                      </font>
                   </Button>
-                  <TextArea fx:id="txtMultiCode" layoutX="28.0" layoutY="30.0" prefHeight="226.0" prefWidth="394.0" promptText="Digite um em cada linha">
+                  <TextArea fx:id="txtMultiCode" layoutX="28.0" layoutY="30.0" prefHeight="177.0" prefWidth="394.0" promptText="Digite um em cada linha">
                      <font>
                         <Font size="18.0" />
                      </font>
@@ -72,6 +72,12 @@
                         <Font size="18.0" />
                      </font>
                   </Button>
+                  <ComboBox fx:id="cbMultiBarcodeType" layoutX="31.0" layoutY="238.0" prefHeight="25.0" prefWidth="388.0" promptText="Selecione o tipo de Código de Barras" />
+                  <Label layoutX="31.0" layoutY="211.0" text="Tipo do código de Barras:">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
                </children></AnchorPane>
       </content>
     </Tab>
